@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 98.75">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 98.75">
   <defs>
     <style>
       .cls-1 {
@@ -9,5 +9,10 @@
       }
     </style>
   </defs>
-  <text class="cls-1" transform="translate(23.47 68.63)"><tspan x="0" y="0">Lucky Draw</tspan></text>
+  <g id="Layer_3" data-name="Layer 3">
+    <rect y="2.38" width="496" height="94"/>
+  </g>
+  <g id="Layer_2" data-name="Layer 2">
+    <text class="cls-1" transform="translate(23.47 68.63)"><tspan x="0" y="0">Lucky Draw</tspan></text>
+  </g>
 </svg>
