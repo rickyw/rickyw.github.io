@@ -6,6 +6,7 @@
     <script src="./assets/js/aframe-ar-nft.js"></script>
     
     <script>
+	alert('test');
       AFRAME.registerComponent('markerhandler', {
         init: function () {
           const marker = this.el;
@@ -15,8 +16,8 @@
               value: e.target.attributes.name.nodeValue,
               name: e.target.attributes.logoName.nodeValue,
             }, '*');
+			alert('detected');
           });
-		  alert('detected');
         }
       });
     </script>
