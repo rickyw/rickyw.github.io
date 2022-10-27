@@ -94,13 +94,14 @@ function setupMain(){
 		substack.scrolling = "0";
 		substack.style.border= "none";
 		substack.style.background = "white";
-		
+		/*
 		document.getElementById("load-button").addEventListener("click", function(){
 			// Add Iframe to webpage
 			loadSubscribe.appendChild(substack);
 			// Hide button
 			this.style.display = "none";
 		})
+		*/
 		
 		// Allow window to listen for a postMessage
     window.addEventListener("message", (event)=>{
@@ -121,7 +122,14 @@ function setupMain(){
 
 function unloadCameraFrame(){
 	loadSubscribe.removeChild(substack);
-	document.getElementById("load-button").style.display = "block";
+	updateVisibility("step2","show");
+	//document.getElementById("load-button").style.display = "block";
+}
+function showCamera(cid){
+	updateVisibility("step2","hide");
+	loadSubscribe.appendChild(substack);
+	//document.getElementById("load-button").style.display = "block";
+	//updateVisibility("step1","hide");
 }
 $(document).ready(setupMain);
 </script>
@@ -154,19 +162,19 @@ $(document).ready(setupMain);
   </div>
   </div>
   
-    <div id="step2" class="w3-display-middle w3-hide">
+    <div id="step2" class="w3-display-middle">
     <h1 class="w3-jumbo w3-animate-top w3-center">MINI GAME!</h1>
     <hr class="w3-border-grey" style="margin:auto;width:40%">
     <p class="w3-large w3-center">XXXX</p>
 	<div>
-	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="agreedTNC()">1</button>
-	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="agreedTNC()">2</button>
-	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="agreedTNC()">3</button>
-	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="agreedTNC()">4</button>
-	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="agreedTNC()">5</button>
-	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="agreedTNC()">6</button>
-	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="agreedTNC()">7</button>
-	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="agreedTNC()">8</button>
+	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="showCamera('1')">1</button>
+	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="showCamera()">2</button>
+	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="showCamera()">3</button>
+	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="showCamera()">4</button>
+	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="showCamera()">5</button>
+	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="showCamera()">6</button>
+	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="showCamera()">7</button>
+	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="showCamera()">8</button>
 	</div>
  <div class="w3-row-padding w3-center w3-section">
   <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:20px" onClick="agreedTNC()">REDEEM</button>
@@ -174,7 +182,7 @@ $(document).ready(setupMain);
   </div>
 
   <div id="load-frame" class="w3-display-middle">
-		<button id="load-button">LOAD</button>
+		
 	</div>
 
   <div class="w3-display-bottomleft w3-padding-large">
