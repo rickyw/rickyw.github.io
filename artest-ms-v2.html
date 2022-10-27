@@ -10,13 +10,13 @@
       AFRAME.registerComponent('markerhandler', {
         init: function () {
           const marker = this.el;
-          marker.addEventListener('markerFound', (e) => {
+          alert('detected');
+		  marker.addEventListener('markerFound', (e) => {
             window.top.postMessage({
               type: 'stamp_detected',
               value: e.target.attributes.name.nodeValue,
               name: e.target.attributes.logoName.nodeValue,
             }, '*');
-			alert('detected');
           });
         }
       });
