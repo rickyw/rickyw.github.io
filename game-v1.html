@@ -101,6 +101,19 @@ function setupMain(){
 			// Hide button
 			this.style.display = "none";
 		})
+		
+		// Allow window to listen for a postMessage
+    window.addEventListener("message", (event)=>{
+// Normally you would check event.origin
+        // To verify the targetOrigin matches
+        // this window's domain
+		console.log("message received");
+		console.log(event.data); 
+ //       let txt=document.querySelector('#txtMsg');
+        // event.data contains the message sent
+  //      txt.value=`Name is ${event.data.pName} Age is  ${event.data.pAge}` ;
+      
+    });
 }
 $(document).ready(setupMain);
 </script>
