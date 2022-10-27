@@ -105,7 +105,7 @@ function updateVisibility(elementID, vis) {
 }
 
 function agreedTNC(){
-	setCookie('agreedTNC','true');
+	setCookie('agreedTNC','true',7);
 	updateVisibility("step1","hide");
 	updateVisibility("step2","show");
 	
@@ -146,14 +146,15 @@ function setupMain(){
 		console.log("message received");
 		console.log(event.data); 
 		if (event.data.type == 'stamp_detected'){
-		window.unloadCameraFrame();
+		//window.unloadCameraFrame();
+		window.scanSuccess();
 		}
  //       let txt=document.querySelector('#txtMsg');
         // event.data contains the message sent
   //      txt.value=`Name is ${event.data.pName} Age is  ${event.data.pAge}` ;
       
     });
-	var ck_agreeTNC = getCookie('agreedTNC');
+	var ck_agreeTNC = 'true';//getCookie('agreedTNC');
 	if (ck_agreeTNC == 'true'){
 		window.agreedTNC();
 	}
@@ -162,14 +163,19 @@ function setupMain(){
 
 function unloadCameraFrame(){
 	loadSubscribe.removeChild(substack);
+	updateVisibility("step3","hide");
 	updateVisibility("step2","show");
 	//document.getElementById("load-button").style.display = "block";
 }
 function showCamera(cid){
 	updateVisibility("step2","hide");
+	updateVisibility("step3","show");
 	loadSubscribe.appendChild(substack);
 	//document.getElementById("load-button").style.display = "block";
 	//updateVisibility("step1","hide");
+}
+function scanSuccess(){
+	updateVisibility("successText","show");
 }
 $(document).ready(setupMain);
 </script>
@@ -224,8 +230,15 @@ $(document).ready(setupMain);
   </div>
   </div>
 
-  <div id="load-frame" class="w3-display-middle">
-		
+  <div id="step3" class="w3-display-middle w3-hide">
+	<div>
+	<p id="successText" class="w3-large w3-center w3-hide">You have successfully collected this puzzle</p>
+	</div>
+	<div id="load-frame">
+	</div>
+	 <div class="w3-row-padding w3-center w3-section">
+	<button class="w3-button w3-padding-large w3-light-grey" style="margin-top:20px" onClick="unloadCameraFrame()">BACK</button>
+	</div>
 	</div>
 
   <div class="w3-display-bottomleft w3-padding-large">
