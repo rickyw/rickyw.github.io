@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="./assets/css/w3.css">
+<script src="./assets/js/jquery.min.f65891607efbe75b84a8031849cec6c7.js"></script>
 <style>
 body,h1 {font-family: arial,sans-serif}
 body, html {height: 100%}
@@ -75,29 +76,33 @@ function agreedTNC(){
 	
 }
 
-function loadCameraFrame(){
-var loadSubscribe = document.getElementById("load-frame");
+var loadSubscribe;
+var substack;
+
+function setupMain(){
+		// event to trigger iframe loading
+		loadSubscribe = document.getElementById("load-frame");
 
 		// create iframe
-		var substack = document.createElement("iframe");
+		substack = document.createElement("iframe");
 		// Add attributes
 		substack.src = "https://rickyw.github.io/artest-ms.html";
 		// Set size and hide iframe border
-		substack.width = "300";
-		substack.height = "150";
+		substack.width = "600";
+		substack.height = "400";
 		substack.frameBorder ="0";
 		substack.scrolling = "0";
 		substack.style.border= "none";
 		substack.style.background = "white";
 		
-		// event to trigger iframe loading
-		document.getElementById("loadButton").addEventListener("click", function(){
+		document.getElementById("load-button").addEventListener("click", function(){
 			// Add Iframe to webpage
 			loadSubscribe.appendChild(substack);
 			// Hide button
 			this.style.display = "none";
 		})
 }
+$(document).ready(setupMain);
 </script>
 
 </head>
@@ -147,8 +152,8 @@ var loadSubscribe = document.getElementById("load-frame");
   </div>
   </div>
 
-  <div id="load-subscribe" class="w3-display-middle">
-		<button id="loadButton">LOAD</button>
+  <div id="load-frame" class="w3-display-middle">
+		<button id="load-button">LOAD</button>
 	</div>
 
   <div class="w3-display-bottomleft w3-padding-large">
