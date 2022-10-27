@@ -105,6 +105,7 @@ function updateVisibility(elementID, vis) {
 }
 
 function agreedTNC(){
+	setCookie('agreedTNC','true');
 	updateVisibility("step1","hide");
 	updateVisibility("step2","show");
 	
@@ -152,6 +153,11 @@ function setupMain(){
   //      txt.value=`Name is ${event.data.pName} Age is  ${event.data.pAge}` ;
       
     });
+	var ck_agreeTNC = getCookie('agreedTNC');
+	if (ck_agreeTNC == 'true'){
+		window.agreedTNC();
+	}
+
 }
 
 function unloadCameraFrame(){
@@ -175,7 +181,7 @@ $(document).ready(setupMain);
   <div class="w3-display-topleft w3-padding-large w3-xlarge">
     Logo
   </div>
-  <div id="step1" class="w3-display-middle w3-hide">
+  <div id="step1" class="w3-display-middle">
     <h1 class="w3-jumbo w3-animate-top w3-center">MINI GAME</h1>
     <hr class="w3-border-grey" style="margin:auto;width:40%">
     <p class="w3-large w3-center">XXXX</p>
@@ -196,7 +202,7 @@ $(document).ready(setupMain);
   </div>
   </div>
   
-    <div id="step2" class="w3-display-middle">
+    <div id="step2" class="w3-display-middle w3-hide">
     <h1 class="w3-jumbo w3-animate-top w3-center">MINI GAME!</h1>
     <hr class="w3-border-grey" style="margin:auto;width:40%">
     <p class="w3-large w3-center">XXXX</p>
