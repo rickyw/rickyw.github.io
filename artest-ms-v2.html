@@ -6,17 +6,16 @@
     <script src="./assets/js/aframe-ar-nft.js"></script>
     
     <script>
-	alert('test');
       AFRAME.registerComponent('markerhandler', {
         init: function () {
           const marker = this.el;
-          alert('detected');
 		  marker.addEventListener('markerFound', (e) => {
             window.top.postMessage({
               type: 'stamp_detected',
               value: e.target.attributes.name.nodeValue,
               name: e.target.attributes.logoName.nodeValue,
             }, '*');
+			alert('detected');
           });
         }
       });
