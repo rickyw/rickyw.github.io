@@ -73,6 +73,7 @@ function updateVisibility(elementID, vis) {
 
 function agreedTNC(){
 	updateVisibility("step1","hide");
+	updateVisibility("step2","show");
 	
 }
 
@@ -141,7 +142,7 @@ $(document).ready(setupMain);
   <div class="w3-display-topleft w3-padding-large w3-xlarge">
     Logo
   </div>
-  <div id="step1" class="w3-display-middle w3-hide">
+  <div id="step1" class="w3-display-middle ">
     <h1 class="w3-jumbo w3-animate-top w3-center">MINI GAME</h1>
     <hr class="w3-border-grey" style="margin:auto;width:40%">
     <p class="w3-large w3-center">XXXX</p>
@@ -162,22 +163,25 @@ $(document).ready(setupMain);
   </div>
   </div>
   
-    <div id="step2" class="w3-display-middle">
+    <div id="step2" class="w3-display-middle w3-hide">
     <h1 class="w3-jumbo w3-animate-top w3-center">MINI GAME!</h1>
     <hr class="w3-border-grey" style="margin:auto;width:40%">
     <p class="w3-large w3-center">XXXX</p>
 	<div>
 	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="showCamera('1')">1</button>
-	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="showCamera()">2</button>
-	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="showCamera()">3</button>
-	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="showCamera()">4</button>
-	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="showCamera()">5</button>
-	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="showCamera()">6</button>
-	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="showCamera()">7</button>
-	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="showCamera()">8</button>
+	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="showCamera('2')">2</button>
+	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="showCamera('3')">3</button>
+	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="showCamera('4')">4</button>
+	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="showCamera('5')">5</button>
+	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="showCamera('6')">6</button>
+	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="showCamera('7')">7</button>
+	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="showCamera('8')">8</button>
+	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="showCamera('9')">9</button>
+	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="showCamera('10')">10</button>
+	<button class="w3-button w3-padding w3-light-grey" style="margin-top:20px" onClick="showCamera('11')">11</button>
 	</div>
  <div class="w3-row-padding w3-center w3-section">
-  <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:20px" onClick="agreedTNC()">REDEEM</button>
+  <button class="w3-button w3-padding-large w3-light-grey w3-disabled" style="margin-top:20px" onClick="agreedTNC()">REDEEM</button>
   </div>
   </div>
 
