@@ -22,48 +22,8 @@ div.ex3 {
   padding:5% 5%;
 }
 
- .arjs-loader {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.7);
-      }
-
-      .spinner {
-        border: 0.75rem solid #2367a8;
-        border-top: 0.75rem solid #FFFFFF;
-        border-radius: 50%;
-        width: 4rem;
-        height: 4rem;
-        animation: spin 1.5s linear infinite;
-      }
-
-      @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
-
 </style>
-<script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
-<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 <script>
- AFRAME.registerComponent('markerhandler', {
-        init: function () {
-          const marker = this.el;
-          marker.addEventListener('markerFound', (e) => {
-            window.top.postMessage({
-              type: 'stamp_detected',
-              value: e.target.attributes.name.nodeValue,
-              name: e.target.attributes.logoName.nodeValue,
-            }, '*');
-          });
-        }
-      });
 // Modal Image Gallery
 function onClick(element) {
   document.getElementById("img01").src = element.src;
@@ -114,6 +74,30 @@ function agreedTNC(){
 	updateVisibility("step1","hide");
 	
 }
+
+function loadCameraFrame(){
+var loadSubscribe = document.getElementById("load-frame");
+
+		// create iframe
+		var substack = document.createElement("iframe");
+		// Add attributes
+		substack.src = "https://rickyw.github.io/artest-ms.html";
+		// Set size and hide iframe border
+		substack.width = "300";
+		substack.height = "150";
+		substack.frameBorder ="0";
+		substack.scrolling = "0";
+		substack.style.border= "none";
+		substack.style.background = "white";
+		
+		// event to trigger iframe loading
+		document.getElementById("loadButton").addEventListener("click", function(){
+			// Add Iframe to webpage
+			loadSubscribe.appendChild(substack);
+			// Hide button
+			this.style.display = "none";
+		})
+}
 </script>
 
 </head>
@@ -162,35 +146,10 @@ function agreedTNC(){
   <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:20px" onClick="agreedTNC()">AGREE</button>
   </div>
   </div>
-   <div id="step3" class="w3-display-middle">
-  <div style="display: flex; flex-direction: column; height: 100%; width: 100%; align-items: center; justify-content:center" >
-      <img src='./stampLogo/stamp1.png' height="70%" alt="stamp1" style="opacity: 0.3">
-    </div>
-    <!-- minimal loader shown until image descriptors are loaded -->
-    <div class="arjs-loader">
-      <div class="spinner"></div>
-    </div>
-    <a-scene
-      vr-mode-ui="enabled: false;"
-      renderer="logarithmicDepthBuffer: true;"
-      arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
-      markerhandler
-      embedded
-    >
-      <a-nft
-        name="f75dae18-58b8-41e2-ad80-06ad07db365f"
-        logoName="Stamp 1 of Part 1"
-        type="nft"
-        url="stamps/stamp1"
-        smooth="true"
-        smoothCount="10"
-        smoothTolerance=".01"
-        smoothThreshold="5"
-      />
-      <a-entity camera></a-entity>
-    </a-scene>
 
-  </div>
+  <div id="load-subscribe" class="w3-display-middle">
+		<button id="loadButton">LOAD</button>
+	</div>
 
   <div class="w3-display-bottomleft w3-padding-large">
     Powered by <a href="" target="_blank">XXX</a>
@@ -198,13 +157,4 @@ function agreedTNC(){
 </div>
 
 </body>
-  <script>
-    window.alert = console.log;
-    window.addEventListener('camera-error', (e) => {
-      window.top.postMessage({
-        type: 'camera-error',
-        value: 'Webcam Error',
-      }, '*');
-    });
-  </script>
 </html>
