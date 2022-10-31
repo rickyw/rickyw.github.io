@@ -154,11 +154,11 @@ function showCamera(cid){
 	updateVisibility("step3","show");
 	selectedPuzzle = cid;
 	if (selectedPuzzle == '1'){
-		substack.src = "./scanner38.html?rnd" + generateString(8);
+		substack.src = "./scanner38.html?rnd=" + generateString(8);
 	}else if (selectedPuzzle == '2'){
-		substack.src = "./scanner38b.html?rnd" + generateString(8);
+		substack.src = "./scanner38b.html?rnd=" + generateString(8);
 	}else{
-		substack.src = "./scanner38.html?rnd" + generateString(8);
+		substack.src = "./scanner38.html?rnd=" + generateString(8);
 	}
 	loadSubscribe.appendChild(substack);
 	//document.getElementById("load-button").style.display = "block";
