@@ -8825,6 +8825,7 @@
 					console.log("rwtest-C()-before");
 					function C() {
 						console.log("rwtest-C()",this);
+						console.log("rwtest-C()","g.domElement",g.domElement);
 						g.domElement && (document.body.appendChild(g.domElement), window.dispatchEvent(new CustomEvent("arjs-video-loaded", {
 									detail: {
 										component: document.querySelector("#arjs-video")
@@ -8880,6 +8881,7 @@
 								}
 							}), 1e3)
 					};
+					console.log("rwtest", "_initSourceWebcam","I",I);
 					var B = document.createElement("video");
 					if (B.setAttribute("autoplay", ""), B.setAttribute("muted", ""), B.setAttribute("playsinline", ""), B.style.width = this.parameters.displayWidth + "px", B.style.height = this.parameters.displayHeight + "px", void 0 === navigator.mediaDevices || void 0 === navigator.mediaDevices.enumerateDevices || void 0 === navigator.mediaDevices.getUserMedia) {
 						if (void 0 === navigator.mediaDevices)
