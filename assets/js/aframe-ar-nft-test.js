@@ -8861,6 +8861,7 @@
 					I
 				},
 				p.prototype._initSourceWebcam = function (A, I) {
+					console.log("rwtest", "_initSourceWebcam",A,I);
 					var g = this;
 					I = I || function (A) {
 						var I = new CustomEvent("camera-error", {
