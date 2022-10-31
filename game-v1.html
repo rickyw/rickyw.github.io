@@ -155,7 +155,7 @@ function setupMain(){
   //      txt.value=`Name is ${event.data.pName} Age is  ${event.data.pAge}` ;
      
     });
-	var ck_agreeTNC = 'true';//getCookie('agreedTNC');
+	var ck_agreeTNC = getCookie('agreedTNC'); //'true';//
 	if (ck_agreeTNC == 'true'){
 		window.agreedTNC();
 	}
