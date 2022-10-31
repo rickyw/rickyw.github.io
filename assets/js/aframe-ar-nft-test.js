@@ -6174,6 +6174,7 @@
 																var I,
 																g = this;
 																return o().wrap((function (A) {
+																		console.log("rwtest",A.prev,A.next);
 																		for (; ; )
 																			switch (A.prev = A.next) {
 																			case 0:
