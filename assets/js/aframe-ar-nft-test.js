@@ -6516,6 +6516,7 @@
 										})) : "barcode" === A.parameters.type ? (g = A.parameters.barcodeValue, I.trackBarcodeMarkerId(g, A.parameters.size)) : "nft" === A.parameters.type ? function (I, g) {
 									var B = new o;
 									window.addEventListener("arjs-video-loaded", (function (Q) {
+											console.log("rwtest arjs-video-loaded");
 											var E = Q.detail.component,
 											i = E.clientWidth,
 											o = E.clientHeight,
