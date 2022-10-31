@@ -8808,6 +8808,7 @@
 				};
 				p.prototype.init = function (A, I) {
 					var g = this;
+					console.log("rwtest",this.parameters.sourceType);
 					if ("image" === this.parameters.sourceType)
 						var B = this._initSourceImage(C, I);
 					else
@@ -8819,6 +8820,7 @@
 					this.domElement.style.zIndex = "-2",
 					this.domElement.setAttribute("id", "arjs-video"),
 					this;
+					console.log("rwtest-C()-before");
 					function C() {
 						console.log("rwtest-C()");
 						g.domElement && (document.body.appendChild(g.domElement), window.dispatchEvent(new CustomEvent("arjs-video-loaded", {
@@ -8827,6 +8829,7 @@
 									}
 								})), g.ready = !0, A && A())
 					}
+					console.log("rwtest-C()-after");
 				},
 				p.prototype._initSourceImage = function (A) {
 					var I = document.createElement("img");
