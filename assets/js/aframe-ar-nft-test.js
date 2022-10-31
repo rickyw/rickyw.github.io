@@ -8819,6 +8819,7 @@
 					this.domElement.setAttribute("id", "arjs-video"),
 					this;
 					function C() {
+						console.log("rwtest-C()");
 						g.domElement && (document.body.appendChild(g.domElement), window.dispatchEvent(new CustomEvent("arjs-video-loaded", {
 									detail: {
 										component: document.querySelector("#arjs-video")
