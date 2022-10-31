@@ -95,6 +95,10 @@ function deleteCookie( name, path, domain ) {
 			';expires=Thu, 01-Jan-1970 00:00:01 GMT';
 }
 
+function clearCookie(){
+	deleteCookie("agreedTNC");
+}
+
 function updateVisibility(elementID, vis) {
     var x = document.getElementById(elementID);
     if (vis == "hide" && x.className.indexOf("w3-hide") == -1) {
@@ -105,7 +109,7 @@ function updateVisibility(elementID, vis) {
 }
 
 function agreedTNC(){
-	setCookie('agreedTNC','true',7);
+	setCookie('agreedTNC','true');
 	updateVisibility("step1","hide");
 	updateVisibility("step2","show");
 	
@@ -263,7 +267,7 @@ $(document).ready(setupMain);
 	</div>
 
   <div class="w3-display-bottomleft w3-padding-large">
-    Powered by <a href="" target="_blank">XXX</a>
+    Powered by <a href="javascript:clearCookie()" target="_blank">XXX</a>
   </div>
 </div>
 
