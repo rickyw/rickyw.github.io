@@ -6980,7 +6980,9 @@
 							[g.parameters.labelingMode];
 							console.assert(void 0 !== Q),
 							I.setLabelingMode(Q),
+							console.log("rwtest","_initArtoolkit","before A()");
 							A()
+							console.log("rwtest","_initArtoolkit","after A()");
 						})),
 					this
 				},
@@ -8822,7 +8824,7 @@
 					this;
 					console.log("rwtest-C()-before");
 					function C() {
-						console.log("rwtest-C()");
+						console.log("rwtest-C()",this);
 						g.domElement && (document.body.appendChild(g.domElement), window.dispatchEvent(new CustomEvent("arjs-video-loaded", {
 									detail: {
 										component: document.querySelector("#arjs-video")
