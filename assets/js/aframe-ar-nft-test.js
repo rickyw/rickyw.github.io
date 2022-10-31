@@ -8808,7 +8808,7 @@
 				};
 				p.prototype.init = function (A, I) {
 					var g = this;
-					console.log("rwtest",this.parameters.sourceType);
+					console.log("rwtest","init",this.parameters.sourceType);
 					if ("image" === this.parameters.sourceType)
 						var B = this._initSourceImage(C, I);
 					else
