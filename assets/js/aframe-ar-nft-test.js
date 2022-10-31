@@ -5317,6 +5317,7 @@
 																var g,
 																B;
 																return o().wrap((function (A) {
+																		console.log("rwtest","loadCamera",A.prev,A.next);
 																		for (; ; )
 																			switch (A.prev = A.next) {
 																			case 0:
