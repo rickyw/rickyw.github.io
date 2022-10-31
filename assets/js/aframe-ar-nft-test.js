@@ -6516,6 +6516,7 @@
 											I.trackPatternMarkerId(g, A.parameters.size)
 										})) : "barcode" === A.parameters.type ? (g = A.parameters.barcodeValue, I.trackBarcodeMarkerId(g, A.parameters.size)) : "nft" === A.parameters.type ? function (I, g) {
 									var B = new o;
+									console.log("rwtest","addEventListener","arjs-video-loaded");	
 									window.addEventListener("arjs-video-loaded", (function (Q) {
 											console.log("rwtest arjs-video-loaded");
 											var E = Q.detail.component,
