@@ -79,7 +79,8 @@
   <script>
     window.alert = console.log;
     window.addEventListener('camera-error', (e) => {
-      window.top.postMessage({
+      console.log('camera-error',e);
+	  window.top.postMessage({
         type: 'camera-error',
         value: 'Webcam Error',
       }, '*');
