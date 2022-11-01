@@ -5191,25 +5191,30 @@
 								return E(A, null, [{
 											key: "fetchRemoteData",
 											value: (g = I(o().mark((function A(I) {
+																console.log("rwtest","fetchRemoteData");
 																var g;
 																return o().wrap((function (A) {
 																		for (; ; )
 																			switch (A.prev = A.next) {
 																			case 0:
+																				console.log("rwtest","fetchRemoteData","case 0");
 																				return A.prev = 0,
 																				A.next = 3,
 																				h().get(I, {
 																					responseType: "arraybuffer"
 																				});
 																			case 3:
+																				console.log("rwtest","fetchRemoteData","case 3");
 																				return g = A.sent,
 																				A.abrupt("return", new Uint8Array(g.data));
 																			case 7:
+																				console.log("rwtest","fetchRemoteData","case 7");
 																				throw A.prev = 7,
 																				A.t0 = A.catch(0),
 																				A.t0;
 																			case 10:
 																			case "end":
+																				console.log("rwtest","fetchRemoteData","case 10end");
 																				return A.stop()
 																			}
 																	}), A, null, [[0, 7]])
