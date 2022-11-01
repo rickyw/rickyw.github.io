@@ -8813,7 +8813,8 @@
 				};
 				p.prototype.init = function (A, I) {
 					var g = this;
-					console.log("rwtest","init",this.parameters.sourceType);
+					console.log("rwtest","init","this",this);
+					console.log("rwtest","init","this.parameters.sourceType",this.parameters.sourceType);
 					console.log("rwtest","init","A",A);
 					console.log("rwtest","init","I",I);
 					if ("image" === this.parameters.sourceType)
@@ -8831,7 +8832,8 @@
 					console.log("rwtest","init2","I",I);
 					console.log("rwtest-C()-before");
 					function C() {
-						console.log("rwtest-C()",this);
+						console.log("rwtest-C()","this",this);
+						console.log("rwtest-C()","g",g);
 						console.log("rwtest-C()","A",A);
 						console.log("rwtest-C()","I",I);
 						console.log("rwtest-C()","g.domElement",g.domElement);
