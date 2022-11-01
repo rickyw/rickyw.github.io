@@ -5323,6 +5323,7 @@
 																		for (; ; )
 																			switch (A.prev = A.next) {
 																			case 0:
+																				console.log("rwtest","loadCamera","case 0:");
 																				if (g = "/camera_param_" + this.cameraCount++, !(I instanceof Uint8Array)) {
 																					A.next = 5;
 																					break
@@ -5331,18 +5332,22 @@
 																				A.next = 14;
 																				break;
 																			case 5:
+																				console.log("rwtest","loadCamera","case 5:");
 																				return A.prev = 5,
 																				A.next = 8,
 																				G.fetchRemoteData(I);
 																			case 8:
+																				console.log("rwtest","loadCamera","case 8:");
 																				B = A.sent,
 																				A.next = 14;
 																				break;
 																			case 11:
+																				console.log("rwtest","loadCamera","case 11:");
 																				throw A.prev = 11,
 																				A.t0 = A.catch(5),
 																				A.t0;
 																			case 14:
+																				console.log("rwtest","loadCamera","case 14:");
 																				return this._storeDataFile(B, g),
 																				A.abrupt("return", this.instance._loadCamera(g));
 																			case 16:
