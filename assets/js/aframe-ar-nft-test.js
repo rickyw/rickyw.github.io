@@ -5339,8 +5339,8 @@
 																			case 5:
 																				console.log("rwtest","loadCamera","case 5:");
 																				return A.prev = 5,
-																				A.next = 8;
-																				//G.fetchRemoteData(I);
+																				A.next = 8,
+																				G.fetchRemoteData(I);
 																			case 8:
 																				console.log("rwtest","loadCamera","case 8:");
 																				B = A.sent,
