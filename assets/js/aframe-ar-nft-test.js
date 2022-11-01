@@ -5199,10 +5199,11 @@
 																			case 0:
 																				console.log("rwtest","fetchRemoteData","case 0");
 																				return A.prev = 0,
-																				A.next = 3,
+																				A.next = 3;/*,
 																				h().get(I, {
 																					responseType: "arraybuffer"
 																				});
+																				*/
 																			case 3:
 																				console.log("rwtest","fetchRemoteData","case 3");
 																				return g = A.sent,
