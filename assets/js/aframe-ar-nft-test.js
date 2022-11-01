@@ -8907,7 +8907,7 @@
 						null
 					}
 					return navigator.mediaDevices.enumerateDevices().then((function (C) {
-							console.log("rwtest","enumerateDevices");
+							console.log("rwtest","enumerateDevices",C);
 							var Q = {
 								audio: !1,
 								video: {
@@ -8924,7 +8924,7 @@
 									exact: g.parameters.deviceId
 								}),
 							navigator.mediaDevices.getUserMedia(Q).then((function (I) {
-									console.log("rwtest","getUserMedia");
+									console.log("rwtest","getUserMedia",I);
 									B.srcObject = I;
 									var C = new CustomEvent("camera-init", {
 											stream: I
