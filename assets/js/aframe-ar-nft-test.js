@@ -5264,6 +5264,7 @@
 									this.multiMarkerCount = 0,
 									this.cameraCount = 0,
 									this.version = "0.1.3",
+									console.info("rwtest","ARToolkit ", this.version)
 									console.info("ARToolkit ", this.version)
 								}
 								var B,
