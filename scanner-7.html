@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Scanner 7</title>
+    <script src="./assets/js/aframe-master.min.js"></script>
+    <script src="./assets/js/aframe-ar-nft-3.js"></script>
+    
+    <script>
+      AFRAME.registerComponent('markerhandler', {
+        init: function () {
+          const marker = this.el;
+		  marker.addEventListener('markerFound', (e) => {
+            window.top.postMessage({
+              type: 'stamp_detected',
+              value: e.target.attributes.name.nodeValue,
+              name: e.target.attributes.logoName.nodeValue,
+            }, '*');
+          });
+        }
+      });
+    </script>
+    <style>
+      .arjs-loader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+
+      .spinner {
+        border: 0.75rem solid #2367a8;
+        border-top: 0.75rem solid #FFFFFF;
+        border-radius: 50%;
+        width: 4rem;
+        height: 4rem;
+        animation: spin 1.5s linear infinite;
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body style="margin : 0px; overflow: hidden; height: 100%">
+    <div style="display: flex; flex-direction: column; height: 100%; width: 100%; align-items: center; justify-content:center" >
+      <img src='./stampLogo/puzzle-show-7.png' height="70%" alt="stamp1" style="opacity: 0.3">
+    </div>
+    <!-- minimal loader shown until image descriptors are loaded -->
+    <div class="arjs-loader">
+      <div class="spinner"></div>
+    </div>
+    <a-scene
+      vr-mode-ui="enabled: false;"
+      renderer="logarithmicDepthBuffer: true;"
+      arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+      markerhandler
+      embedded
+    >
+      <a-nft
+        name="f75dae18-58b8-41e2-ad80-06ad07db365f"
+        logoName="Stamp 7"
+        type="nft"
+        url="stamps/v1/puzzle-show-7"
+        smooth="true"
+        smoothCount="10"
+        smoothTolerance=".01"
+        smoothThreshold="5"
+      />
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+  <script>
+    window.alert = console.log;
+    window.addEventListener('camera-error', (e) => {
+      console.log('camera-error',e);
+	  window.top.postMessage({
+        type: 'camera-error',
+        value: 'Webcam Error',
+      }, '*');
+    });
+  </script>
+</html>
