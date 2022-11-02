@@ -8943,6 +8943,9 @@
 								}),
 							navigator.mediaDevices.getUserMedia(Q).then((function (I) {
 									console.log("rwtest","getUserMedia",I);
+									function delay(time) {
+									  return new Promise(resolve => setTimeout(resolve, time));
+									}
 									B.srcObject = I;
 									var C = new CustomEvent("camera-init", {
 											stream: I
@@ -8951,8 +8954,8 @@
 									document.body.addEventListener("click", g.onInitialClick, {
 										once: !0
 									}),
-									console.log("rwtest","getUserMedia","before A()");
-									A()
+									console.log("rwtest","getUserMedia","before A()");									
+									delay(1000).then(() => A()
 								})).catch((function (A) {
 									I({
 										name: A.name,
