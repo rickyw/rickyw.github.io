@@ -8910,7 +8910,7 @@
 									document.body.addEventListener("click", g.onInitialClick, {
 										once: !0
 									}),
-									delay(1000).then(() => A());
+									delay(500).then(() => A());
 								})).catch((function (A) {
 									I({
 										name: A.name,
