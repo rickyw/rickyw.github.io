@@ -5205,6 +5205,8 @@
 																				});
 																			case 3:
 																				console.log("rwtest","fetchRemoteData","case 3");
+																				console.log("rwtest","fetchRemoteData","case 3");
+																				console.log("rwtest","fetchRemoteData","case 3");
 																				return g = A.sent,
 																				A.abrupt("return", new Uint8Array(g.data));
 																			case 7:
@@ -8843,6 +8845,10 @@
 					console.log("rwtest","init2","I",I);
 					console.log("rwtest-C()-before");
 					function C() {
+						function delay(time) {
+						  return new Promise(resolve => setTimeout(resolve, time));
+						}
+						delay(1000).then(() => console.log('ran after 1 second1 passed'));
 						console.log("rwtest-C()","this",this);
 						console.log("rwtest-C()","g",g);
 						console.log("rwtest-C()","A",A);
