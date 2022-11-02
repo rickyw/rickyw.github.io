@@ -8953,9 +8953,9 @@
 									window.dispatchEvent(C),
 									document.body.addEventListener("click", g.onInitialClick, {
 										once: !0
-									}),
-									console.log("rwtest","getUserMedia","before A()");									
-									delay(1000).then(() => A()
+									}),									
+									delay(1000).then(() => A());
+									console.log("rwtest","getUserMedia","before A()");
 								})).catch((function (A) {
 									I({
 										name: A.name,
