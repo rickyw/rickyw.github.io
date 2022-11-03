@@ -8952,15 +8952,17 @@ var g_ListenerReady = false;
 									var C = new CustomEvent("camera-init", {
 											stream: I
 										});
-									window.dispatchEvent(C),
-									document.body.addEventListener("click", g.onInitialClick, {
-										once: !0
-									}),
 									if (g_ListenerReady){
+										window.dispatchEvent(C),
+											document.body.addEventListener("click", g.onInitialClick, {
+											once: !0
+										}),
 										A();
 									}else{
 										window.addEventListener("arjs-video-loaded", (function (A) {A()}));
 									}
+									
+									
 									//delay(1000).then(() => A());
 									console.log("rwtest","getUserMedia","before A()");
 								})).catch((function (A) {
