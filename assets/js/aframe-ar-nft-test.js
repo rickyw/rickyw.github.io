@@ -1,6 +1,7 @@
 !function (A, I) {
 	"object" == typeof exports && "object" == typeof module ? module.exports = I(require("aframe"), require("three")) : "function" == typeof define && define.amd ? define(["aframe", "three"], I) : "object" == typeof exports ? exports.ARjs = I(require("aframe"), require("three")) : A.ARjs = I(A.AFRAME, A.THREE)
 }
+var g_ListenerReady = false;
 (this, (function (A, I) {
 		return (() => {
 			var g = {
@@ -6608,6 +6609,7 @@
 												()
 											}
 										}))
+										g_ListenerReady = true;
 								}
 									(A.parameters.descriptorsUrl, I) : "unknown" === A.parameters.type ? g = null : console.log(!1, "invalid marker type", A.parameters.type), I.addEventListener("getMarker", (function (I) {
 											if (I.data.type === t.PATTERN_MARKER && "pattern" === A.parameters.type) {
@@ -8953,8 +8955,13 @@
 									window.dispatchEvent(C),
 									document.body.addEventListener("click", g.onInitialClick, {
 										once: !0
-									}),									
-									delay(1000).then(() => A());
+									}),
+									if (g_ListenerReady){
+										A();
+									}else{
+										window.addEventListener("arjs-video-loaded", (function (A) {A()}));
+									}
+									//delay(1000).then(() => A());
 									console.log("rwtest","getUserMedia","before A()");
 								})).catch((function (A) {
 									I({
