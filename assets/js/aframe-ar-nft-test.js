@@ -6610,8 +6610,10 @@
 												()
 											}
 										}));
-										console.log("rwtest","A.g_ListenerReady",A.g_ListenerReady);
-										A.g_ListenerReady = true;
+										//console.log("rwtest","A.g_ListenerReady",A.g_ListenerReady);
+										//A.g_ListenerReady = true;
+										console.log("rwtest","artoolkit.myListenerReady",artoolkit.myListenerReady);
+										artoolkit.myListenerReady = true;
 								}
 									(A.parameters.descriptorsUrl, I) : "unknown" === A.parameters.type ? g = null : console.log(!1, "invalid marker type", A.parameters.type), I.addEventListener("getMarker", (function (I) {
 											if (I.data.type === t.PATTERN_MARKER && "pattern" === A.parameters.type) {
@@ -8960,7 +8962,8 @@
 									console.log("rwtest","this",this);
 									console.log("rwtest","I",I);
 									console.log("rwtest","A.g_ListenerReady",A.g_ListenerReady);
-									if (g_ListenerReady){
+									console.log("rwtest","artoolkit.myListenerReady",artoolkit.myListenerReady);									
+									if (artoolkit.myListenerReady){
 										window.dispatchEvent(C),
 											document.body.addEventListener("click", g.onInitialClick, {
 											once: !0
