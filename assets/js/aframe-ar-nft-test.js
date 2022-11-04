@@ -8929,6 +8929,7 @@
 					}
 					return navigator.mediaDevices.enumerateDevices().then((function (C) {
 							console.log("rwtest","enumerateDevices",C);
+							console.log("rwtest","enumerateDevices",g);
 							var Q = {
 								audio: !1,
 								video: {
