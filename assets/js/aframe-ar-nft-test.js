@@ -5270,6 +5270,7 @@
 									this.markerCount = 0,
 									this.multiMarkerCount = 0,
 									this.cameraCount = 0,
+									this.myListenerReady = false,
 									this.version = "0.1.3",
 									console.info("rwtest","ARToolkit ", this.version)
 									console.info("ARToolkit ", this.version)
