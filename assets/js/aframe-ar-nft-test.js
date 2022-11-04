@@ -6445,6 +6445,7 @@
 						smoothTolerance: .01,
 						smoothThreshold: 2
 					};
+					this.g_ListenerReady = false;
 					var Q = ["pattern", "barcode", "nft", "unknown"];
 					console.assert(-1 !== Q.indexOf(this.parameters.type), "illegal value", this.parameters.type),
 					Q = ["modelViewMatrix", "cameraTransformMatrix"],
@@ -6608,7 +6609,8 @@
 												()
 											}
 										}));
-										g_ListenerReady = true;
+										console.log("rwtest","A.g_ListenerReady",A.g_ListenerReady);
+										A.g_ListenerReady = true;
 								}
 									(A.parameters.descriptorsUrl, I) : "unknown" === A.parameters.type ? g = null : console.log(!1, "invalid marker type", A.parameters.type), I.addEventListener("getMarker", (function (I) {
 											if (I.data.type === t.PATTERN_MARKER && "pattern" === A.parameters.type) {
@@ -8951,11 +8953,24 @@
 									var C = new CustomEvent("camera-init", {
 											stream: I
 										});
+									
+									console.log("rwtest","A.g_ListenerReady",A.g_ListenerReady);
+									if (g_ListenerReady){
+										window.dispatchEvent(C),
+											document.body.addEventListener("click", g.onInitialClick, {
+											once: !0
+										}),
+										A();
+									}else{
+										window.addEventListener("arjs-video-loaded", (function (A) {A()}));
+									}
+									/*
 									window.dispatchEvent(C),
 									document.body.addEventListener("click", g.onInitialClick, {
 										once: !0
 									}),									
 									delay(1000).then(() => A());
+									*/
 									console.log("rwtest","getUserMedia","before A()");
 								})).catch((function (A) {
 									I({
