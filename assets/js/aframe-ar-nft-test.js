@@ -8970,7 +8970,9 @@
 										}),
 										A();
 									}else{
-										window.addEventListener("arjs-video-loaded", (function (A) {A()}));
+										window.addEventListener("arjs-video-loaded", (function (A) {
+											A()
+										}));
 									}
 									/*
 									window.dispatchEvent(C),
