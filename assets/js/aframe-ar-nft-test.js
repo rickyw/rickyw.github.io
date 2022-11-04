@@ -8954,6 +8954,9 @@
 											stream: I
 										});
 									
+									console.log("rwtest","A",A);
+									console.log("rwtest","this",this);
+									console.log("rwtest","I",I);
 									console.log("rwtest","A.g_ListenerReady",A.g_ListenerReady);
 									if (g_ListenerReady){
 										window.dispatchEvent(C),
