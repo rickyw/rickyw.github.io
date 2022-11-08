@@ -5262,7 +5262,6 @@
 									this.markerCount = 0,
 									this.multiMarkerCount = 0,
 									this.cameraCount = 0,
-									this.myListenerReady = false,
 									this.version = "0.1.3",
 									console.info("ARToolkit ", this.version)
 								}
@@ -6590,8 +6589,6 @@
 												}
 												()
 											}
-											artoolkit.myListenerReady = true;
-											window.dispatchEvent(new CustomEvent("myListenerReady"))
 										}))
 								}
 									(A.parameters.descriptorsUrl, I) : "unknown" === A.parameters.type ? g = null : console.log(!1, "invalid marker type", A.parameters.type), I.addEventListener("getMarker", (function (I) {
@@ -8909,26 +8906,11 @@
 									var C = new CustomEvent("camera-init", {
 											stream: I
 										});
-									/*	
 									window.dispatchEvent(C),
 									document.body.addEventListener("click", g.onInitialClick, {
 										once: !0
 									}),
 									delay(1000).then(() => A());
-									*/
-									if (artoolkit.myListenerReady){
-										window.dispatchEvent(C),
-											document.body.addEventListener("click", g.onInitialClick, {
-											once: !0
-										}),
-										A();
-									}else{
-										window.dispatchEvent(C),
-										document.body.addEventListener("click", g.onInitialClick, {
-											once: !0
-										}),									
-										window.addEventListener("myListenerReady", () => {A()});										
-									}
 								})).catch((function (A) {
 									I({
 										name: A.name,
