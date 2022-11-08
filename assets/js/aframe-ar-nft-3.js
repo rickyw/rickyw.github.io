@@ -6886,7 +6886,7 @@
 				R.prototype.addEventListener = I.EventDispatcher.prototype.addEventListener,
 				R.prototype.hasEventListener = I.EventDispatcher.prototype.hasEventListener,
 				R.prototype.removeEventListener = I.EventDispatcher.prototype.removeEventListener,
-				R.baseURL = "https://ar-js-org.github.io/AR.js/three.js/",
+				R.baseURL = "https://rickyw.github.io/three.js/",
 				R.REVISION = "3.4.0",
 				R.createDefaultCamera = function (A) {
 					if (console.assert(!1, "use ARjs.Utils.createDefaultCamera instead"), "artoolkit" === A)
