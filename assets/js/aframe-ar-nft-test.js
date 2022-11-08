@@ -8980,7 +8980,8 @@
 										document.body.addEventListener("click", g.onInitialClick, {
 											once: !0
 										}),									
-										delay(1000).then(() => A());
+										window.addEventListener("arjs-video-loaded", delay(1).then(() => A()));
+										//delay(1000).then(() => A());
 									}
 									/*
 									window.dispatchEvent(C),
