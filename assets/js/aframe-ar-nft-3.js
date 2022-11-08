@@ -8916,17 +8916,14 @@
 									}),
 									delay(1000).then(() => A());
 									*/
-									if (artoolkit.myListenerReady){
+									//if (artoolkit.myListenerReady){
 										window.dispatchEvent(C),
 											document.body.addEventListener("click", g.onInitialClick, {
 											once: !0
 										}),
 										A();
-									}else{
-										window.dispatchEvent(C),
-										document.body.addEventListener("click", g.onInitialClick, {
-											once: !0
-										}),									
+									//}else{
+									if (!artoolkit.myListenerReady){
 										window.addEventListener("myListenerReady", () => {A()});										
 									}
 								})).catch((function (A) {
