@@ -8983,7 +8983,7 @@
 										document.body.addEventListener("click", g.onInitialClick, {
 											once: !0
 										}),									
-										window.addEventListener("myListenerReady", delay(1).then(() => A()));
+										window.addEventListener("myListenerReady", delay(10000).then(() => A()));
 										//delay(1000).then(() => A());
 										console.log("rwtest","added eventlistener for myListenerReady");	
 									}
