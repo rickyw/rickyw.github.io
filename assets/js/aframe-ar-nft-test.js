@@ -8963,7 +8963,8 @@
 									console.log("rwtest","I",I);
 									console.log("rwtest","A.g_ListenerReady",A.g_ListenerReady);
 									console.log("rwtest","artoolkit.myListenerReady",artoolkit.myListenerReady);									
-									if (artoolkit.myListenerReady){
+									//if (artoolkit.myListenerReady){
+									if (true){
 										window.dispatchEvent(C),
 											document.body.addEventListener("click", g.onInitialClick, {
 											once: !0
