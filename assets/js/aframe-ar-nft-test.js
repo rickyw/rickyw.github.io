@@ -6612,8 +6612,9 @@
 										}));
 										//console.log("rwtest","A.g_ListenerReady",A.g_ListenerReady);
 										//A.g_ListenerReady = true;
-										console.log("rwtest","artoolkit.myListenerReady",artoolkit.myListenerReady);
 										artoolkit.myListenerReady = true;
+										console.log("rwtest","artoolkit.myListenerReady",artoolkit.myListenerReady);
+										console.log("rwtest","before dispatchEvent myListenerReady");
 										window.dispatchEvent(new CustomEvent("myListenerReady"))
 										
 								}
@@ -8984,7 +8985,7 @@
 										}),									
 										window.addEventListener("myListenerReady", delay(1).then(() => A()));
 										//delay(1000).then(() => A());
-										console.log("rwtest","added eventlistener for arjs-video-loaded");	
+										console.log("rwtest","added eventlistener for myListenerReady");	
 									}
 									/*
 									window.dispatchEvent(C),
