@@ -1944,7 +1944,7 @@
 									}
 								}
 								function fA(A, I, g) {
-									console.log("rwtest","fA(A, I, g)",A,I,g);
+									//console.log("rwtest","fA(A, I, g)",A,I,g);
 									throw new mA(A).init(I, g),
 									A
 								}
@@ -5191,32 +5191,32 @@
 								return E(A, null, [{
 											key: "fetchRemoteData",
 											value: (g = I(o().mark((function A(I) {
-																console.log("rwtest","fetchRemoteData");
+																//console.log("rwtest","fetchRemoteData");
 																var g;
 																return o().wrap((function (A) {
 																		for (; ; )
 																			switch (A.prev = A.next) {
 																			case 0:
-																				console.log("rwtest","fetchRemoteData","case 0");
+																				//console.log("rwtest","fetchRemoteData","case 0");
 																				return A.prev = 0,
 																				A.next = 3,
 																				h().get(I, {
 																					responseType: "arraybuffer"
 																				});
 																			case 3:
-																				console.log("rwtest","fetchRemoteData","case 3");
-																				console.log("rwtest","fetchRemoteData","case 3");
-																				console.log("rwtest","fetchRemoteData","case 3");
+																				//console.log("rwtest","fetchRemoteData","case 3");
+																				//console.log("rwtest","fetchRemoteData","case 3");
+																				//console.log("rwtest","fetchRemoteData","case 3");
 																				return g = A.sent,
 																				A.abrupt("return", new Uint8Array(g.data));
 																			case 7:
-																				console.log("rwtest","fetchRemoteData","case 7");
+																				//console.log("rwtest","fetchRemoteData","case 7");
 																				throw A.prev = 7,
 																				A.t0 = A.catch(0),
 																				A.t0;
 																			case 10:
 																			case "end":
-																				console.log("rwtest","fetchRemoteData","case 10end");
+																				//console.log("rwtest","fetchRemoteData","case 10end");
 																				return A.stop()
 																			}
 																	}), A, null, [[0, 7]])
@@ -5327,11 +5327,11 @@
 																var g,
 																B;
 																return o().wrap((function (A) {
-																		console.log("rwtest","loadCamera",A.prev,A.next);
+																		//console.log("rwtest","loadCamera",A.prev,A.next);
 																		for (; ; )
 																			switch (A.prev = A.next) {
 																			case 0:
-																				console.log("rwtest","loadCamera","case 0:");
+																				//console.log("rwtest","loadCamera","case 0:");
 																				if (g = "/camera_param_" + this.cameraCount++, !(I instanceof Uint8Array)) {
 																					A.next = 5;
 																					break
@@ -5340,22 +5340,22 @@
 																				A.next = 14;
 																				break;
 																			case 5:
-																				console.log("rwtest","loadCamera","case 5:");
+																				//console.log("rwtest","loadCamera","case 5:");
 																				return A.prev = 5,
 																				A.next = 8,
 																				G.fetchRemoteData(I);
 																			case 8:
-																				console.log("rwtest","loadCamera","case 8:");
+																				//console.log("rwtest","loadCamera","case 8:");
 																				B = A.sent,
 																				A.next = 14;
 																				break;
 																			case 11:
-																				console.log("rwtest","loadCamera","case 11:");
+																				//console.log("rwtest","loadCamera","case 11:");
 																				throw A.prev = 11,
 																				A.t0 = A.catch(5),
 																				A.t0;
 																			case 14:
-																				console.log("rwtest","loadCamera","case 14:");
+																				//console.log("rwtest","loadCamera","case 14:");
 																				return this._storeDataFile(B, g),
 																				A.abrupt("return", this.instance._loadCamera(g));
 																			case 16:
@@ -6190,7 +6190,7 @@
 																var I,
 																g = this;
 																return o().wrap((function (A) {
-																		console.log("rwtest",A.prev,A.next);
+																		//console.log("rwtest",A.prev,A.next);
 																		for (; ; )
 																			switch (A.prev = A.next) {
 																			case 0:
@@ -6198,14 +6198,14 @@
 																				(new w).init();
 																			case 2:
 																				return this.artoolkit = A.sent,
-																				console.log("[ARController]", "ARToolkit initialized"),
+																				//console.log("[ARController]", "ARToolkit initialized"),
 																				A.next = 6,
 																				this.artoolkit.loadCamera(this.cameraParam);
 																			case 6:
 																				return this.cameraId = A.sent,
-																				console.log("[ARController]", "Camera params loaded with ID", this.cameraId),
+																				//console.log("[ARController]", "Camera params loaded with ID", this.cameraId),
 																				this.id = this.artoolkit.setup(this.width, this.height, this.cameraId),
-																				console.log("[ARController]", "Got ID from setup", this.id),
+																				//console.log("[ARController]", "Got ID from setup", this.id),
 																				this._initNFT(),
 																				I = artoolkit.frameMalloc,
 																				this.framepointer = I.framepointer,
@@ -6535,7 +6535,7 @@
 									var B = new o;
 									console.log("rwtest","addEventListener","arjs-video-loaded");	
 									window.addEventListener("arjs-video-loaded", (function (Q) {
-											console.log("rwtest arjs-video-loaded");
+											console.log("rwtest arjs-video-loaded is listened");
 											var E = Q.detail.component,
 											i = E.clientWidth,
 											o = E.clientHeight,
@@ -6614,6 +6614,8 @@
 										//A.g_ListenerReady = true;
 										console.log("rwtest","artoolkit.myListenerReady",artoolkit.myListenerReady);
 										artoolkit.myListenerReady = true;
+										window.dispatchEvent(new CustomEvent("myListenerReady"))
+										
 								}
 									(A.parameters.descriptorsUrl, I) : "unknown" === A.parameters.type ? g = null : console.log(!1, "invalid marker type", A.parameters.type), I.addEventListener("getMarker", (function (I) {
 											if (I.data.type === t.PATTERN_MARKER && "pattern" === A.parameters.type) {
@@ -7002,9 +7004,9 @@
 							[g.parameters.labelingMode];
 							console.assert(void 0 !== Q),
 							I.setLabelingMode(Q),
-							console.log("rwtest","_initArtoolkit","before A()");
+							//console.log("rwtest","_initArtoolkit","before A()");
 							A()
-							console.log("rwtest","_initArtoolkit","after A()");
+							//console.log("rwtest","_initArtoolkit","after A()");
 						})),
 					this
 				},
@@ -8832,10 +8834,10 @@
 				};
 				p.prototype.init = function (A, I) {
 					var g = this;
-					console.log("rwtest","init","this",this);
-					console.log("rwtest","init","this.parameters.sourceType",this.parameters.sourceType);
-					console.log("rwtest","init","A",A);
-					console.log("rwtest","init","I",I);
+					//console.log("rwtest","init","this",this);
+					//console.log("rwtest","init","this.parameters.sourceType",this.parameters.sourceType);
+					//console.log("rwtest","init","A",A);
+					//console.log("rwtest","init","I",I);
 					if ("image" === this.parameters.sourceType)
 						var B = this._initSourceImage(C, I);
 					else
@@ -8847,9 +8849,9 @@
 					this.domElement.style.zIndex = "-2",
 					this.domElement.setAttribute("id", "arjs-video"),
 					this;
-					console.log("rwtest","init2","A",A);
-					console.log("rwtest","init2","I",I);
-					console.log("rwtest-C()-before");
+					//console.log("rwtest","init2","A",A);
+					//console.log("rwtest","init2","I",I);
+					//console.log("rwtest-C()-before");
 					function C() {
 						/*
 						function delay(time) {
@@ -8857,18 +8859,18 @@
 						}
 						delay(1000).then(() => console.log('ran after 1 second1 passed'));
 						*/
-						console.log("rwtest-C()","this",this);
-						console.log("rwtest-C()","g",g);
-						console.log("rwtest-C()","A",A);
-						console.log("rwtest-C()","I",I);
-						console.log("rwtest-C()","g.domElement",g.domElement);
+						console.log("rwtest-C()","dispatched arjs-video-loaded event");
+						//console.log("rwtest-C()","g",g);
+						//console.log("rwtest-C()","A",A);
+						//console.log("rwtest-C()","I",I);
+						//console.log("rwtest-C()","g.domElement",g.domElement);
 						g.domElement && (document.body.appendChild(g.domElement), window.dispatchEvent(new CustomEvent("arjs-video-loaded", {
 									detail: {
 										component: document.querySelector("#arjs-video")
 									}
 								})), g.ready = !0, A && A())
 					}
-					console.log("rwtest-C()-after");
+					//console.log("rwtest-C()-after");
 				},
 				p.prototype._initSourceImage = function (A) {
 					var I = document.createElement("img");
@@ -8900,8 +8902,8 @@
 					I
 				},
 				p.prototype._initSourceWebcam = function (A, I) {
-					console.log("rwtest", "_initSourceWebcam","A",A);
-					console.log("rwtest", "_initSourceWebcam","I",I);
+					//console.log("rwtest", "_initSourceWebcam","A",A);
+					//console.log("rwtest", "_initSourceWebcam","I",I);
 					var g = this;
 					I = I || function (A) {
 						var I = new CustomEvent("camera-error", {
@@ -8917,7 +8919,7 @@
 								}
 							}), 1e3)
 					};
-					console.log("rwtest", "_initSourceWebcam","I",I);
+					//console.log("rwtest", "_initSourceWebcam","I",I);
 					var B = document.createElement("video");
 					if (B.setAttribute("autoplay", ""), B.setAttribute("muted", ""), B.setAttribute("playsinline", ""), B.style.width = this.parameters.displayWidth + "px", B.style.height = this.parameters.displayHeight + "px", void 0 === navigator.mediaDevices || void 0 === navigator.mediaDevices.enumerateDevices || void 0 === navigator.mediaDevices.getUserMedia) {
 						if (void 0 === navigator.mediaDevices)
@@ -8931,8 +8933,8 @@
 						null
 					}
 					return navigator.mediaDevices.enumerateDevices().then((function (C) {
-							console.log("rwtest","enumerateDevices",C);
-							console.log("rwtest","enumerateDevices",g);
+							//console.log("rwtest","enumerateDevices",C);
+							//console.log("rwtest","enumerateDevices",g);
 							var Q = {
 								audio: !1,
 								video: {
@@ -8949,7 +8951,7 @@
 									exact: g.parameters.deviceId
 								}),
 							navigator.mediaDevices.getUserMedia(Q).then((function (I) {
-									console.log("rwtest","getUserMedia",I);
+									//console.log("rwtest","getUserMedia",I);
 									function delay(time) {
 									  return new Promise(resolve => setTimeout(resolve, time));
 									}
@@ -8958,10 +8960,10 @@
 											stream: I
 										});
 									
-									console.log("rwtest","A",A);
-									console.log("rwtest","this",this);
-									console.log("rwtest","I",I);
-									console.log("rwtest","A.g_ListenerReady",A.g_ListenerReady);
+									//console.log("rwtest","A",A);
+									//console.log("rwtest","this",this);
+									//console.log("rwtest","I",I);
+									//console.log("rwtest","A.g_ListenerReady",A.g_ListenerReady);
 									console.log("rwtest","artoolkit.myListenerReady",artoolkit.myListenerReady);									
 									if (artoolkit.myListenerReady){
 									//if (true){
@@ -8980,8 +8982,9 @@
 										document.body.addEventListener("click", g.onInitialClick, {
 											once: !0
 										}),									
-										window.addEventListener("arjs-video-loaded", delay(1).then(() => A()));
+										window.addEventListener("myListenerReady", delay(1).then(() => A()));
 										//delay(1000).then(() => A());
+										console.log("rwtest","added eventlistener for arjs-video-loaded");	
 									}
 									/*
 									window.dispatchEvent(C),
@@ -8990,7 +8993,7 @@
 									}),									
 									delay(1000).then(() => A());
 									*/
-									console.log("rwtest","getUserMedia","before A()");
+									//console.log("rwtest","getUserMedia","before A()");
 								})).catch((function (A) {
 									I({
 										name: A.name,
