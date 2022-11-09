@@ -8729,12 +8729,12 @@
 						sourceType: "webcam"
 					},
 					this.contextParameters = {
-						cameraParametersUrl: F.baseURL + "../data/data/camera_para.dat",
+						cameraParametersUrl: F.baseURL + "../hackaday/data/camera_para.dat",
 						detectionMode: "mono"
 					},
 					this.defaultMarkerParameters = {
 						type: "pattern",
-						patternUrl: F.baseURL + "../data/data/patt.hiro",
+						patternUrl: F.baseURL + "../hackaday/data/patt.hiro",
 						changeMatrixMode: "modelViewMatrix"
 					},
 					this
@@ -8745,7 +8745,7 @@
 					this
 				},
 				H.prototype.defaultMarker = function (A) {
-					return "artoolkit" === (A = A || this.contextParameters.trackingBackend) ? (this.contextParameters.detectionMode = "mono", this.defaultMarkerParameters.type = "pattern", this.defaultMarkerParameters.patternUrl = F.baseURL + "../data/data/patt.hiro") : console.assert(!1),
+					return "artoolkit" === (A = A || this.contextParameters.trackingBackend) ? (this.contextParameters.detectionMode = "mono", this.defaultMarkerParameters.type = "pattern", this.defaultMarkerParameters.patternUrl = F.baseURL + "../hackaday/data/patt.hiro") : console.assert(!1),
 					this
 				},
 				H.prototype.sourceWebcam = function () {
