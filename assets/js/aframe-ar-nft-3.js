@@ -6859,7 +6859,7 @@
 						debug: !1,
 						detectionMode: "mono",
 						matrixCodeType: "3x3",
-						cameraParametersUrl: R.baseURL + "../data/data/camera_para.dat",
+						cameraParametersUrl: R.baseURL + "../hackaday/data/camera_para.dat",
 						maxDetectionRate: 60,
 						canvasWidth: 640,
 						canvasHeight: 480,
