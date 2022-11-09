@@ -6592,11 +6592,11 @@
 												()
 											}
 										}));
-										console.log("rwtest","A.g_ListenerReady",A.g_ListenerReady);
+										//console.log("rwtest","A.g_ListenerReady",A.g_ListenerReady);
 										//A.g_ListenerReady = true;
 										artoolkit.myListenerReady = true;
-										console.log("rwtest","artoolkit.myListenerReady",artoolkit.myListenerReady);
-										console.log("rwtest","before dispatchEvent myListenerReady");
+										//console.log("rwtest","artoolkit.myListenerReady",artoolkit.myListenerReady);
+										//console.log("rwtest","before dispatchEvent myListenerReady");
 										window.dispatchEvent(new CustomEvent("myListenerReady"))
 										
 								}
@@ -8916,11 +8916,11 @@
 											stream: I
 										});
 									
-									console.log("rwtest","A",A);
-									console.log("rwtest","this",this);
-									console.log("rwtest","I",I);
-									console.log("rwtest","A.g_ListenerReady",A.g_ListenerReady);
-									console.log("rwtest","artoolkit.myListenerReady",artoolkit.myListenerReady);									
+									//console.log("rwtest","A",A);
+									//console.log("rwtest","this",this);
+									//console.log("rwtest","I",I);
+									//console.log("rwtest","A.g_ListenerReady",A.g_ListenerReady);
+									//console.log("rwtest","artoolkit.myListenerReady",artoolkit.myListenerReady);									
 									if (artoolkit.myListenerReady){
 									//if (true){
 										window.dispatchEvent(C),
@@ -8939,12 +8939,12 @@
 											once: !0
 										}),									
 										//window.addEventListener("myListenerReady", delay(10000).then(() => A()));
-										console.log("rwtest","added myListenerReady eventlistener 1");
+										//console.log("rwtest","added myListenerReady eventlistener 1");
 										window.addEventListener("myListenerReady", () => {A()});
-										console.log("rwtest","added myListenerReady eventlistener 2");
+										//console.log("rwtest","added myListenerReady eventlistener 2");
 									
 										//delay(1000).then(() => A());
-										console.log("rwtest","added eventlistener for myListenerReady");	
+										//console.log("rwtest","added eventlistener for myListenerReady");	
 									}
 								})).catch((function (A) {
 									I({
