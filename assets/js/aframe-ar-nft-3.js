@@ -6589,10 +6589,10 @@
 													}, [A.data.buffer])
 												}
 												()
-											}
-											artoolkit.myListenerReady = true;
-											window.dispatchEvent(new CustomEvent("myListenerReady"))
+											}											
 										}))
+										artoolkit.myListenerReady = true;
+										window.dispatchEvent(new CustomEvent("myListenerReady"))
 								}
 									(A.parameters.descriptorsUrl, I) : "unknown" === A.parameters.type ? g = null : console.log(!1, "invalid marker type", A.parameters.type), I.addEventListener("getMarker", (function (I) {
 											if (I.data.type === t.PATTERN_MARKER && "pattern" === A.parameters.type) {
