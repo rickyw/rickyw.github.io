@@ -8909,22 +8909,19 @@
 									var C = new CustomEvent("camera-init", {
 											stream: I
 										});
-									/*	
-									window.dispatchEvent(C),
-									document.body.addEventListener("click", g.onInitialClick, {
-										once: !0
-									}),
-									delay(1000).then(() => A());
-									*/
-									//if (artoolkit.myListenerReady){
+									
+									if (artoolkit.myListenerReady){									
 										window.dispatchEvent(C),
 											document.body.addEventListener("click", g.onInitialClick, {
 											once: !0
 										}),
 										A();
-									//}else{
-									if (!artoolkit.myListenerReady){
-										window.addEventListener("myListenerReady", () => {A()});										
+									}else{
+										window.dispatchEvent(C),
+										document.body.addEventListener("click", g.onInitialClick, {
+											once: !0
+										}),									
+										window.addEventListener("myListenerReady", () => {A()});
 									}
 								})).catch((function (A) {
 									I({
