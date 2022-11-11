@@ -8922,6 +8922,7 @@
 											once: !0
 										}),									
 										window.addEventListener("myListenerReady", () => {A()});
+										const myTimeout = setTimeout(function(){window.alert(artoolkit.myListenerReady)}, 5000);
 									}
 								})).catch((function (A) {
 									I({
