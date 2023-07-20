@@ -3,7 +3,7 @@ text-align: center;
 }
 h2{
     /*font-family: "PwC ITC Charter",Georgia,Serif;*/
-    font-family: "PwC ITC Charter", Georgia, -apple-system, 'Nimbus Roman No9 L', 'Songti SC', 'Hiragino Sans GB', 'Noto Serif SC', 'Microsoft Yahei', Serif;
+    font-family: "PwC ITC Charter", Georgia, -apple-system, 'Nimbus Roman No9 L', 'Songti SC', 'Noto Serif CJK SC', NSimSun, SimSun, Serif;
 	font-style: normal;
     font-weight: normal;
     color: #2d2d2d;
@@ -11,7 +11,7 @@ h2{
 }
 h2{
 	/*font-family: "PwC ITC Charter",Georgia,Serif;*/
-	font-family: "PwC ITC Charter", Georgia, -apple-system, 'Nimbus Roman No9 L', 'Songti SC', 'Hiragino Sans GB', 'Noto Serif SC', 'Microsoft Yahei', Serif;
+	font-family: "PwC ITC Charter", Georgia, -apple-system, 'Nimbus Roman No9 L', 'Songti SC', 'Noto Serif CJK SC', NSimSun, SimSun, Serif;
     font-style: normal;
     font-weight: normal;
     color: #2d2d2d;
@@ -19,13 +19,13 @@ h2{
 }
 h4{
     /*font-family: "PwC Helvetica Neue",Arial,Sans-Serif;*/	
-	font-family: "PwC Helvetica Neue", Arial, -apple-system, 'Nimbus Roman No9 L', 'PingFang SC', 'Hiragino Sans GB', 'Noto Serif CJK SC', NSimSun, SimSun, sans-serif;
+	font-family: "PwC Helvetica Neue", Arial, -apple-system, 'Nimbus Roman No9', 'PingFang SC', 'Hiragino Sans GB', 'Noto Serif SC', 'Microsoft Yahei', sans-serif;
 	color: #2d2d2d;
 	font-size: 1.5rem;
 }
 p{
 	/*font-family: "PwC Helvetica Neue",Arial,Sans-Serif;*/
-	font-family: "PwC Helvetica Neue", Arial, -apple-system, 'Nimbus Roman No9 L', 'PingFang SC', 'Hiragino Sans GB', 'Noto Serif CJK SC', NSimSun, SimSun, sans-serif;
+	font-family: "PwC Helvetica Neue", Arial, -apple-system, 'Nimbus Roman No9', 'PingFang SC', 'Hiragino Sans GB', 'Noto Serif SC', 'Microsoft Yahei', sans-serif;
 	color: #2d2d2d;
 	font-size: 1rem;
 }
